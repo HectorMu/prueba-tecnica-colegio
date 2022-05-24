@@ -1,0 +1,33 @@
+### List all
+GET http://localhost:4000/api/grade/listall
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### List one
+GET http://localhost:4000/api/grade/listone/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### Save
+POST http://localhost:4000/api/grade/save
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw
+Content-Type: application/json
+
+{
+    "name":"5A",
+    "fk_professor":3
+}
+
+### Edit
+PUT http://localhost:4000/api/grade/update/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+Content-Type: application/json
+
+{
+    "name":"4A",
+    "fk_professor":3
+}
+
+### Delete
+DELETE http://localhost:4000/api/grade/delete/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+

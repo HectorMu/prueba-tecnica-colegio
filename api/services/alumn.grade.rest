@@ -1,0 +1,32 @@
+### List all
+GET http://localhost:4000/api/alumns_grade/listall
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### List one
+GET http://localhost:4000/api/alumns_grade/listone/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### Save
+POST http://localhost:4000/api/alumns_grade/save
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+Content-Type: application/json
+
+{
+  "fk_alumn":16,
+  "fk_grade": 1
+}
+### Edit
+PUT http://localhost:4000/api/alumns_grade/update/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+Content-Type: application/json
+
+{
+  "fk_alumn":16,
+  "fk_grade": 2
+}
+
+### Delete
+DELETE http://localhost:4000/api/alumns_grade/delete/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+

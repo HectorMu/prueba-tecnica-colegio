@@ -1,0 +1,36 @@
+### List all
+GET http://localhost:4000/api/professors/listall
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### List one
+GET http://localhost:4000/api/professors/listone/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+### Save
+POST http://localhost:4000/api/professors/save
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw
+Content-Type: application/json
+
+{
+    "name":"Nestor",
+    "lastname":"Chico",
+    "gender":"H",
+    "birthday":"2000/23/09"
+}
+
+### Edit
+PUT http://localhost:4000/api/professors/update/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+Content-Type: application/json
+
+{
+    "name":"Pedro",
+    "lastname":"Martinez",
+    "gender":"H"
+}
+
+### Delete
+DELETE http://localhost:4000/api/professors/delete/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUzNDA2MzgzfQ.dVRHsKImcYeGQvcKOJQOczSSjUb_Ku9fWfCpIYmspAw 
+
+

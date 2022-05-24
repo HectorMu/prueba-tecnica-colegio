@@ -2,11 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const path = require("path");
 const app = express();
 
 //Initialazing database connection
 const initDatabase = require("./database");
+require("./helpers/helpers").initialState();
 
 //Using middlewares
 app.use(cors());
@@ -17,6 +17,10 @@ app.use(express.json());
 //Using the routes
 app.use(require("./routes/template.routes"));
 app.use(require("./routes/auth.routes"));
+app.use(require("./routes/alumn.routes"));
+app.use(require("./routes/alumn.grade.routes"));
+app.use(require("./routes/grade.routes"));
+app.use(require("./routes/professor.routes"));
 
 //To deploy a react router app build with an express server, this must be here forever
 // app.use(express.static(path.join(__dirname, "build")));
