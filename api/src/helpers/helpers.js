@@ -57,4 +57,17 @@ helpers.errorResponse = (error) => {
   };
 };
 
+helpers.hasEmptyPropierty = (object) => {
+  for (var key in object) {
+    if (object[key] === "" || object[key] === null || object[key] === undefined)
+      return {
+        result: true,
+        expected: `El parametro ${key} es requerido`,
+      };
+  }
+  return {
+    result: false,
+  };
+};
+
 module.exports = helpers;

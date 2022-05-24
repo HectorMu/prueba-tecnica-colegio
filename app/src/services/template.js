@@ -1,4 +1,4 @@
-import API from "../config/API";
+import API from "./API";
 
 export const fetchSome = async (data) => {
   try {

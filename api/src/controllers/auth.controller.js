@@ -16,19 +16,19 @@ controller.Login = async (req, res) => {
     if (!results.length > 0)
       return res.status(400).json({
         status: false,
-        statusText: "Wrong credentials, check it out.",
+        statusText: "Verifica tus credenciales",
       });
 
     const user = results[0];
     const passwordComparationResult = await helpers.matchPassword(
-      password,
-      user.password
+      password.toString(),
+      user.password.toString()
     );
 
     if (!passwordComparationResult)
       return res.status(400).json({
         status: false,
-        statusText: "Wrong credentials, check it out.",
+        statusText: "Verifica tus credenciales",
       });
 
     const serializedUser = {

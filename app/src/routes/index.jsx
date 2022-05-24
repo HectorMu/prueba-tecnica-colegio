@@ -1,9 +1,12 @@
 import IsLoggedIn from "@/components/Authentication/IsLoggedIn";
+
 import authRoutes from "./auth";
+import alumnsGradesRoutes from "./alumns.grades";
+import alumnsRoutes from "./alumns";
+import gradesRoutes from "./grades";
+import professorRoutes from "./professor";
 
 import Index from "@/pages/Index";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
 
 import NotFound from "@/pages/status/NotFound";
 
@@ -13,16 +16,12 @@ const index = {
       path: "/",
       element: <Index />,
     },
-    {
-      path: "/dashboard",
-      element: <Home />,
-    },
-    {
-      path: "/About",
-      element: <About />,
-    },
     //all app routes
     ...authRoutes.dev,
+    ...alumnsGradesRoutes.dev,
+    ...alumnsRoutes.dev,
+    ...gradesRoutes.dev,
+    ...professorRoutes.dev,
 
     //not found
     {
@@ -37,17 +36,13 @@ const index = {
       path: "/",
       element: <IsLoggedIn view={Index} />,
     },
-    {
-      path: "/dashboard",
-      element: <IsLoggedIn view={Home} />,
-    },
-    {
-      path: "/about",
-      element: <IsLoggedIn view={About} />,
-    },
+
     //All app routes
     ...authRoutes.production,
-
+    ...alumnsGradesRoutes.production,
+    ...alumnsRoutes.production,
+    ...gradesRoutes.production,
+    ...professorRoutes.production,
     //Not found route
     {
       path: "*",

@@ -19,10 +19,9 @@ controller.ListOne = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const data = await connection.query(
-      "SELECT g.id, g.name AS grade_name, g.fk_professor, p.name, p.lastname from grade g, professor p WHERE g.fk_professor = p.id && g.id = ?",
-      [id]
-    );
+    const data = await connection.query("select * from grade where id = ?", [
+      id,
+    ]);
 
     if (!data.length > 0) return res.json({});
 

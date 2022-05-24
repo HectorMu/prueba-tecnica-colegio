@@ -1,31 +1,42 @@
 import { Navbar, Container, Nav, Button, NavDropdown } from "react-bootstrap";
+import useSession from "@/hooks/useSession";
+import { Logout } from "@/services/auth";
 
 const NavbarLayout = ({ setIsActive, isActive }) => {
+  const { user, setUser } = useSession();
+  const handleLogout = () => {
+    Logout();
+    setUser(null);
+  };
   return (
     <>
       <Navbar fixed="top" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">React Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Colegio</Navbar.Brand>
           <Nav className="ms-auto">
-            <NavDropdown
-              title={<i className="fas fa-user"></i>}
-              id="navbarScrollingDropdown"
-              align={"end"}
-            >
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <div className="d-flex align-items-center">
-              <Button size="sm" onClick={() => setIsActive(!isActive)}>
-                <i className="fas fa-bars"></i>
-              </Button>
-            </div>
+            {user && (
+              <>
+                {" "}
+                <NavDropdown
+                  title={
+                    <span>
+                      <i className="fas fa-user"></i> {user.username}
+                    </span>
+                  }
+                  id="navbarScrollingDropdown"
+                  align={"end"}
+                >
+                  <NavDropdown.Item onClick={handleLogout}>
+                    Cerrar sesion
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <div className="d-flex align-items-center">
+                  <Button size="sm" onClick={() => setIsActive(!isActive)}>
+                    <i className="fas fa-bars"></i>
+                  </Button>
+                </div>
+              </>
+            )}
           </Nav>
         </Container>
       </Navbar>

@@ -20,7 +20,7 @@ controller.ListOne = async (req, res) => {
 
   try {
     const data = await connection.query(
-      "select ag.id, ag.fk_alumn, ag.fk_grade, g.name AS grade_name, a.name, a.lastname from alumn_grade ag, grade g, alumn a WHERE ag.fk_alumn = a.id && g.id = ag.fk_grade && ag.id = ?",
+      "select * from alumn_grade where id = ?",
       [id]
     );
 
